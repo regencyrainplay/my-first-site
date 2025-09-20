@@ -1,0 +1,99 @@
+:root {
+    --bg: #0b0c10;
+    --card: #121317;
+    --text: #e6e6e6;
+    --muted: #a7a7a7;
+    --btn: #2d2f36;
+    --btn-hover: #3a3d46;
+    --accent: #8ab4f8;
+}
+[data-theme="light"] {
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --text: #111216;
+    --muted: #474c52;
+    --btn: #ececf3;
+    --btn-hover: #dedeee;
+    --accent: #2563eb;
+}
+
+* { box-sizing:border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding : 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.avatar {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    display: block; margin: 0 auto 10px;
+}
+
+h1 { margin: 8px 0 4px; font-size: 28px; }
+.tagline { margin: 0 0 16px; color: var(--muted);}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; margin: 14px 0 6px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    background: var(--btn);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    /* animate the background-color property (more specific) and transform */
+    transition: background-color 200ms ease, transform 60ms ease;
+    /* hint to the browser which properties will change for smoother rendering */
+    will-change: transform, background-color;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {background: var(--btn-hover); transform: translateY(-1px); }
+
+.links {
+    list-style: none; padding: 0; margin: 10px 0 8px;
+    display: grid; gap: 10px;
+}
+
+.links a {
+    display: block; padding: 12px 14px;
+    border: 1px dashed rgba(255,255,255,0.12);
+    border-radius: 12px;
+    color: var(--accent); text-decoration: none;
+}
+
+.links a:hover { background: rgba(138,180,248,0.08); }
+
+footer { margin-top: 16px; color: var(--muted); font-size: 14px; }
+
+/* Respect users who prefer reduced motion: disable transitions/animations */
+@media (prefers-reduced-motion: reduce) {
+    .btn, .btn:hover, .links a, .links a:hover {
+        transition: none !important;
+        transform: none !important;
+        will-change: auto !important;
+    }
+}

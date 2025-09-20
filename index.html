@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>My First Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frankie • Link Hub</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p id="msg">This is my very first website.</p>
-    <button onclick="changeText()">Click Me</button>
+    <main class="main">
+        <img class="avatar" src="https://via.placeholder.com/120" alt="Your photo" />
+        <h1>Frankie Castro</h1>
+        <p class="tagline">Chemical Eng Student • Learning to code</p>
+
+        <div class="actions">
+            <a class="btm" href="https://github.com/regencyrainplay" target="_blank" rel="noopener">Github</a>
+            <!-- Make sure to fix this part and the rest of the actions. -->
+            <a class="btm" href="www.linkedin.com/in/frankie-castro-espinoza-2946ba297" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btm" href="#" id="emailBtm">castrofrankie2005@gmail.com</a>
+        </div>
+
+        <ul class="links">
+            <li><a href="#" target="_blank" rel="noopener">Project 1: Unit Converter</a></li>
+            <li><a href="#" target="_blank" rel="noopener"> Project: GPA Calculator</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Resume (PDF)</a></li>
+        </ul>
+
+        <footer>@ <span id="year"></span> Frankie - Built with HTML/CSS/JS</span></footer>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
