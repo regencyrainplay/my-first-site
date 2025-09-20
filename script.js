@@ -14,7 +14,7 @@ document.getElementById("themeToggle").addEventListener("click", () => {
 
 // Copy email to clipboard
 document.getElementById("emailBtn").addEventListener("click", async (e) => {
-    const email = "youremail@example.com"; // <-- change this
+    const email = "castrofrankie2005@gmail.com"; // <-- change this
     try {
         await navigator.clipboard.writeText(email);
         e.target.textContent = "Copied!";
